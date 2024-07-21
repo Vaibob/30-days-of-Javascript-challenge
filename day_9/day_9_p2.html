@@ -1,5 +1,5 @@
 <!-- Challenge 9: https://courses.chaicode.com/learn/home/30-days-of-Javascript-challenge/30-days-javascript-challenge/section/515627/lesson/3197157 -->
-<!-- This code file will only contain feature request 2 i.e. tasks 3 , 4-->
+<!-- This code file will only contain feature request 2 and 3 i.e. tasks 3 , 4 and also task 5,6 respectively-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +20,7 @@
 </head>
 <body>
     <h1>Let's start Activity 2</h1>
+    <p class="to-be-removed">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero laboriosam magni, eos mollitia aut ut. Modi voluptatem id architecto assumenda excepturi aliquid ea omnis, consectetur dolor distinctio quas repellat autem!</p>
     <ul class="weekdays" id="mon-sun">
         <li>Monday</li>
         <li>Tuesday</li>
@@ -55,5 +56,17 @@
     // Append the new <li> to the existing list
     const weekdaysList = document.getElementById("mon-sun"); // Assuming you have an existing <ul> with ID "mon-sun"
     weekdaysList.appendChild(myLi);
+
+    // Task 5 
+
+    // // Let us remove the lorem para from the DOM ... to see it in effect just uncomment the following task
+    // const paraOfLorem = document.querySelector(".to-be-removed")
+    // paraOfLorem.remove()
+
+    // Task 6
+    
+    // // Let us remove the last-child Sunday which we recently added in the DOM as an li ... to see it in effect just uncomment the following task
+    //     const lastLi = document.querySelector(".weekdays:last-child")
+    //     lastLi.remove()
 </script>
 </html>
