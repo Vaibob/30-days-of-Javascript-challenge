@@ -1,0 +1,59 @@
+<!-- Challenge 9: https://courses.chaicode.com/learn/home/30-days-of-Javascript-challenge/30-days-javascript-challenge/section/515627/lesson/3197157 -->
+<!-- This code file will only contain feature request 2 i.e. tasks 3 , 4-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 9: DOM Manipulation feature request 2</title>
+    <style>
+        body {
+            background-color: black;
+            color: antiquewhite;
+        }
+        .main {
+            color: orange;
+            /* We can add a css property to an HTML element created by DOM manipulation in JS */
+        }
+    </style>
+</head>
+<body>
+    <h1>Let's start Activity 2</h1>
+    <ul class="weekdays" id="mon-sun">
+        <li>Monday</li>
+        <li>Tuesday</li>
+        <li>Wednesday</li>
+        <li>Thursday</li>
+        <li>Friday</li>
+        <li>Saturday</li>
+    </ul>
+</body>
+<script>
+    // Task 3
+
+    const mydiv=document.createElement('div')
+    mydiv.setAttribute("class", "main");
+    mydiv.setAttribute("id", "primary-div");
+
+    const addText=document.createTextNode("Sipping some tea!") 
+    mydiv.appendChild(addText) 
+    // document.body.appendChild(mydiv) 
+
+    const h1Element = document.querySelector('h1');
+    h1Element.insertAdjacentElement('afterend', mydiv);
+
+    // Task 4
+    const myLi=document.createElement('li')
+    myLi.setAttribute("class" , "weekdays")
+    myLi.setAttribute("id" , "mon-sun")
+    
+    const addLi = document.createTextNode("Sunday")
+    myLi.appendChild(addLi)
+
+    
+    // Append the new <li> to the existing list
+    const weekdaysList = document.getElementById("mon-sun"); // Assuming you have an existing <ul> with ID "mon-sun"
+    weekdaysList.appendChild(myLi);
+</script>
+</html>
