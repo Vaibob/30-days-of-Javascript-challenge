@@ -1,12 +1,12 @@
 <!-- Challenge 9: https://courses.chaicode.com/learn/home/30-days-of-Javascript-challenge/30-days-javascript-challenge/section/515627/lesson/3197157 -->
-<!-- This code file will only contain feature request 4 i.e. tasks 7 , 8 -->
+<!-- This code file will only contain feature request 4 and 5 i.e. tasks 7 , 8 and tasks 9, 10 respectively -->
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Day 9: DOM Manipulation feature request 4</title>
+    <title>Day 9: DOM Manipulation feature request 4 and 5</title>
     <style>
         body {
             background-color: black;
@@ -18,11 +18,22 @@
         .main{
             text-align: center;
         }
+        #hover-div {
+            width: 200px;
+            height: 200px;
+            background-color: rgb(23, 242, 111);
+            margin: 20px auto;
+        }
     </style>
 </head>
 <body>
     <h1 class="main">Hi let's study DOM Manipulation </h1>
     <img class="will-of-D" src="Lodestar" alt="Get The Log Pose to Laugh Tale">
+    <!-- Added for Task 9 -->
+    <button id="change-text-btn">Change Text</button>
+    <p id="text-paragraph">Read the Poneglyphs to understand the 'True History' and claim the One Piece.</p>
+    <!-- Added for Task 10 -->
+    <div id="hover-div"></div>
 </body>
 <script>
 
@@ -39,5 +50,20 @@
 // myH1.classList.remove("main"); // adding the class "font_orange"
 
 // NOTE: myH1.classList is a DOMTokenList ... just check the browser and inspect it's prototype
+
+// Task 9
+const button = document.getElementById("change-text-btn");
+const paragraph = document.getElementById("text-paragraph");
+button.addEventListener("click", () => {
+        paragraph.textContent = "Oh! it seems like you collected all four road poneglyphs so let me guide you to Laugh Tale";
+    });
+
+// Task 10
+const hoverDiv = document.getElementById("hover-div");
+hoverDiv.addEventListener("mouseover", () => {
+        hoverDiv.style.borderColor = "red";
+        hoverDiv.style.borderStyle = "solid";
+        hoverDiv.style.borderWidth = "5px";
+    });
 </script>
 </html>
