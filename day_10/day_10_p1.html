@@ -1,0 +1,67 @@
+<!-- Challenge 9: https://courses.chaicode.com/learn/home/30-days-of-Javascript-challenge/30-days-javascript-challenge/section/515627/lesson/3197174 -->
+<!-- This code file will only contain feature request 1 i.e. tasks 1 , 2-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10 feature request 1</title>
+    <style>
+        body{
+            background-color: #272424;
+            color: antiquewhite;
+        }
+        .to_be_changed{
+            color: orange;
+        }
+        #change_button{
+            background-color: rgb(206, 206, 177);
+            font-family: 'Georgia' , 'Times New Roman', Times, serif;
+            /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="main">Events in js</h1>
+    <p class="to_be_changed">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique error harum magnam culpa delectus quibusdam fugit architecto accusantium in aliquam minima, veritatis autem earum cum nostrum! Magni sunt inventore quo dolor neque ad at, quia praesentium dolorum saepe quas, alias numquam eligendi consequatur? Neque fugiat omnis quae alias veritatis nulla?</p>
+    <div class="image_of_oda"><img src="./Eiichiro_Oda.webp" alt="Image of Oda sensai"></div>
+    <button id="change_button">CLICK ME</button>
+</body>
+<script>
+    //Task 1s
+
+    const para = document.querySelector('.to_be_changed')
+    const button = document.querySelector('#change_button')
+    let textChanged = false
+    button.addEventListener("click" , ()=>{
+        if (!textChanged) {
+        para.textContent="One Piece, the grand odyssey of pirates, dreams, and boundless seas, has left an indelible mark on anime history. Eiichiro Oda’s world-building is extraordinary, weaving a tapestry of adventure, friendship, and epic battles. While pacing issues and filler arcs occasionally weigh it down, the journey to find the fabled “One Piece” remains captivating. 🏴‍☠️⚓"
+        para.style.backgroundColor =  "pink"
+        para.style.color =  "black"
+        para.style.fontFamily =  "Franklin Gothic Medium"
+        }else {
+            para.textContent="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Similique error harum magnam culpa delectus quibusdam fugit architecto accusantium in aliquam minima, veritatis autem earum cum nostrum! Magni sunt inventore quo dolor neque ad at, quia praesentium dolorum saepe quas, alias numquam eligendi consequatur? Neque fugiat omnis quae alias veritatis nulla?"
+        // Reset the style scheme to default
+        para.style.backgroundColor = ""; 
+        para.style.color = ""; 
+        para.style.fontFamily = "";        
+    }
+        textChanged =!textChanged
+        
+    })
+
+    // Task 2
+
+    const odaImage = document.querySelector(".image_of_oda")
+    let imageVisible = true;
+        button.addEventListener('dblclick', () => {
+            if (imageVisible) {
+                odaImage.style.visibility = 'hidden';
+            } else {
+                odaImage.style.visibility = 'visible';
+            }
+            imageVisible = !imageVisible;
+        });
+</script>
+</html>
