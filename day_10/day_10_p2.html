@@ -1,0 +1,38 @@
+<!-- Challenge 9: https://courses.chaicode.com/learn/home/30-days-of-Javascript-challenge/30-days-javascript-challenge/section/515627/lesson/3197174 -->
+<!-- This code file will only contain feature request 3 i.e tasks 5,6-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10 feature request 3</title>
+    <style>
+        body{
+            background-color: #272424;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h1>Events in js</h1>
+    <input type="text" id="user-input" placeholder="Type something...">
+    <p id="key-display">Press any key!</p>
+
+    <script>
+        const userInput = document.getElementById("user-input");
+        const keyDisplay = document.getElementById("key-display");
+
+        // Keydown event listener
+        userInput.addEventListener("keydown", (event) => {
+            console.log("Key pressed:", event.key);
+            console.log("Key code:", event.keyCode);
+        });
+
+        // Keyup event listener
+        userInput.addEventListener("keyup", (event) => {
+            keyDisplay.textContent = `Current value: ${userInput.value}`;
+        });
+    </script>
+</body>
+</html>
