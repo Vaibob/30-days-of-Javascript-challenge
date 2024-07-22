@@ -1,0 +1,48 @@
+<!-- Challenge 9: https://courses.chaicode.com/learn/home/30-days-of-Javascript-challenge/30-days-javascript-challenge/section/515627/lesson/3197174 -->
+<!-- This code file will only contain feature request 4 i.e tasks 7,8-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10 feature request 3</title>
+    <style>
+        body{
+            background-color: #272424;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <h1>Events in js</h1>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <button type="submit">Submit</button>
+    </form>
+    <label for="mySelect">Select an option:</label>
+    <select id="mySelect">
+    <option value="option1">Option 1</option>
+    <option value="option2">Option 2</option>
+    <option value="option3">Option 3</option>
+</select>
+<p id="selectedValue"></p>
+<script>
+    // Task 1: Submit event listener for form
+    const form = document.getElementById('myForm');
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent default form submission
+        const formData = new FormData(form);
+        console.log('Form data submitted:', Object.fromEntries(formData));
+    });
+
+    // Task 2: Change event listener for select dropdown
+    const select = document.getElementById('mySelect');
+    const displayParagraph = document.getElementById('selectedValue');
+    select.addEventListener('change', function () {
+        const selectedOption = this.value;
+        displayParagraph.textContent = `Selected value: ${selectedOption}`;
+    });
+</script>
+</html>
