@@ -1,0 +1,53 @@
+<!-- Challenge 9: https://courses.chaicode.com/learn/home/30-days-of-Javascript-challenge/30-days-javascript-challenge/section/515627/lesson/3197174 -->
+<!-- This code file will only contain feature request 5 i.e tasks 9,10-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10 feature request 5</title>
+    <style>
+        body{
+            background-color: #272424;
+            color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <ul id="parentList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    
+    <button id="addItemButton">Add Item</button>
+<script>
+    // Task 9
+    document.addEventListener("DOMContentLoaded", function() {
+    // Select the parent element
+    const parentList = document.getElementById("parentList");
+    const addItemButton = document.getElementById("addItemButton");
+    let itemCount = 3;
+
+    // Event listener for the parent element
+    parentList.addEventListener("click", function(event) {
+        // Check if the clicked element is a list item
+        if (event.target && event.target.nodeName === "LI") {
+            console.log(event.target.textContent);
+        }
+    });
+
+    // Task 10
+    
+    // Event listener to add new items
+    addItemButton.addEventListener("click", function() {
+        itemCount++;
+        const newItem = document.createElement("li");
+        newItem.textContent = `Item ${itemCount}`;
+        parentList.appendChild(newItem);
+    });
+});
+</script> 
+</body>
+</html>
