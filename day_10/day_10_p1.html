@@ -1,5 +1,5 @@
 <!-- Challenge 9: https://courses.chaicode.com/learn/home/30-days-of-Javascript-challenge/30-days-javascript-challenge/section/515627/lesson/3197174 -->
-<!-- This code file will only contain feature request 1 i.e. tasks 1 , 2-->
+<!-- This code file will only contain feature request 1 and 2 i.e. tasks 1 , 2 and tasks 3,4 respectively-->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,7 +18,6 @@
         #change_button{
             background-color: rgb(206, 206, 177);
             font-family: 'Georgia' , 'Times New Roman', Times, serif;
-            /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
         }
     </style>
 </head>
@@ -29,13 +28,13 @@
     <button id="change_button">CLICK ME</button>
 </body>
 <script>
-    //Task 1s
+    //Task 1
 
     const para = document.querySelector('.to_be_changed')
     const button = document.querySelector('#change_button')
-    let textChanged = false
+    let textChanged = true
     button.addEventListener("click" , ()=>{
-        if (!textChanged) {
+        if (textChanged === true) {
         para.textContent="One Piece, the grand odyssey of pirates, dreams, and boundless seas, has left an indelible mark on anime history. Eiichiro Oda’s world-building is extraordinary, weaving a tapestry of adventure, friendship, and epic battles. While pacing issues and filler arcs occasionally weigh it down, the journey to find the fabled “One Piece” remains captivating. 🏴‍☠️⚓"
         para.style.backgroundColor =  "pink"
         para.style.color =  "black"
@@ -63,5 +62,18 @@
             }
             imageVisible = !imageVisible;
         });
+
+    // Task 3
+    const h1 = document.querySelector(".main")
+    h1.addEventListener("mouseover", ()=>{
+        h1.style.backgroundColor = "red";
+    })
+
+    // Task 4
+
+    h1.addEventListener("mouseout", () => {
+        h1.style.backgroundColor = ""; 
+    });
+
 </script>
 </html>
